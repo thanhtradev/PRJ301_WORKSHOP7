@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Plant Shop</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  </head>
+  <body>
+    <jsp:useBean id="plantObj" class="model.Plant" scope="request" />
+    <table>
+      <tr>
+        <td rowspan="8">
+          <img src="<jsp:getProperty
+            name="plantObj"
+            property="imgpath"
+          ></jsp:getProperty
+          >">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          ID:<jsp:getProperty name="plantObj" property="id"></jsp:getProperty>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Product name:<jsp:getProperty
+            name="plantObj"
+            property="name"
+          ></jsp:getProperty>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Price:<jsp:getProperty
+            name="plantObj"
+            property="price"
+          ></jsp:getProperty>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Description:<jsp:getProperty
+            name="plantObj"
+            property="description"
+          ></jsp:getProperty>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Status:<jsp:getProperty
+            name="plantObj"
+            property="status"
+          ></jsp:getProperty>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Cate id:<jsp:getProperty
+            name="plantObj"
+            property="cateid"
+          ></jsp:getProperty>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Category:<jsp:getProperty
+            name="plantObj"
+            property="catename"
+          ></jsp:getProperty>
+        </td>
+      </tr>
+    </table>
+    <!--USE EL-->
+    <table>
+      <tr>
+        <td rowspan="8"><img src="${plantObj.imgpath}" /></td>
+      </tr>
+      <tr>
+        <td>ID:${plantObj.id}</td>
+      </tr>
+      <tr>
+        <td>Product name:${plantObj.name}</td>
+      </tr>
+      <tr>
+        <td>Price:${plantObj.price}</td>
+      </tr>
+      <tr>
+        <td>Description:${plantObj.description}</td>
+      </tr>
+      <tr>
+        <td>Status:${plantObj.status}</td>
+      </tr>
+      <tr>
+        <td>Cate id:${plantObj.cateid}</td>
+      </tr>
+      <tr>
+        <td>Category:${plantObj.catename}</td>
+      </tr>
+    </table>
+    <section class="py-5">
+      <div class="container px-4 px-lg-5 my-5">
+        <div class="row gx-4 gx-lg-5 align-items-center">
+          <div class="col-md-6">
+            <img class="card-img-top mb-5 mb-md-0" src="<jsp:getProperty
+              name="plantObj"
+              property="imgpath"
+            ></jsp:getProperty
+            >" />
+          </div>
+          <div class="col-md-6">
+            <div class="small mb-1">SKU: BST-498</div>
+            <h1 class="display-5 fw-bolder">Shop item template</h1>
+            <div class="fs-5 mb-5">
+              <span class="text-decoration-line-through">$45.00</span>
+              <span>$40.00</span>
+            </div>
+            <p class="lead">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Praesentium at dolorem quidem modi. Nam sequi consequatur
+              obcaecati excepturi alias magni, accusamus eius blanditiis
+              delectus ipsam minima ea iste laborum vero?
+            </p>
+            <div class="d-flex">
+              <input
+                class="form-control text-center me-3"
+                id="inputQuantity"
+                type="num"
+                value="1"
+                style="max-width: 3rem"
+              />
+              <button class="btn btn-outline-dark flex-shrink-0" type="button">
+                <i class="bi-cart-fill me-1"></i>
+                Add to cart
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

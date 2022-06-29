@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Plant Shop</title>
+    <!-- <link rel="stylesheet" href="mycss.css" type="text/css" /> -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  </head>
+
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img
+            src="images/logo.png"
+            alt="Avatar Logo"
+            style="width: 40px"
+            class="rounded"
+          />
+        </a>
+        <div class="collapse navbar-collapse" id="mynavbar">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.jsp">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="registration.jsp">Register</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="login.jsp">Login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="mainController?action=viewcart"
+                >View Cart</a
+              >
+            </li>
+          </ul>
+          <form class="d-flex" action="mainController" method="post">
+            <input
+              class="form-control me-2"
+              type="text"
+              placeholder="Search"
+              name="txtsearch"
+              value=""
+            />
+            <select class="form-select" name="searchby">
+              <option value="byname">By name</option>
+              <option value="bycate">By category</option>
+            </select>
+            <button
+              class="btn btn-primary"
+              type="submit"
+              name="action"
+              value="search"
+            >
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <!-- Header -->
+    <header class="bg-success py-2">
+      <div class="container px-4 px-lg-5 my-5">
+        <div class="text-center text-white">
+          <h1 class="display-4 fw-bolder">Plant shop</h1>
+          <p class="lead fw-normal text-white-50 mb-0">Life is too short</p>
+          <p class="lead fw-normal text-white-50 mb-0">
+            Buy more and more houseplants
+          </p>
+        </div>
+      </div>
+    </header>
+    <!-- Product card -->
+    <section class="py-5">
+      <div class="container px-4 px-lg-5 mt-5">
+        <div
+          class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center"
+        >
+          <!-- Product card -->
+          <div class="col mb-5">
+            <div class="card h-100">
+              <img
+                class="card-img-top"
+                src="images/img1.jpg"
+                alt="Card image"
+              />
+              <div class="card-body p-4">
+                <div class="text-center">
+                  <!-- Product Name -->
+                  <h5 class="fw-bolder">Vanda</h5>
+                  <p class="card-text">Some example text.</p>
+                  <!-- Price -->
+                  1000
+                </div>
+                <!-- <a href="#" class="btn btn-primary">Add to cart</a> -->
+              </div>
+              <!-- Product action -->
+              <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                <div class="text-center">
+                  <a class="btn btn-outline-dark mt-auto" href="#"
+                    >Add to cart</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="card" style="width: 400px">
+      <img class="card-img-top" src="images/img1.jpg" alt="Card image" />
+      <div class="card-body">
+        <h4 class="card-title">vanda</h4>
+        <p class="card-text">Some example text.</p>
+        <a href="#" class="btn btn-primary">Add to cart</a>
+      </div>
+    </div>
+
+    <table class="product">
+      <tr>
+        <td><img src="images/img1.jpg" class="plantimg" /></td>
+        <td>Product ID:7</td>
+        <td>Product name:vanda</td>
+        <td>Price:1000</td>
+        <td>Status:available</td>
+        <td>Category:orchid</td>
+        <td>
+          <a href="mainController?action=addtocart&pid=7">Add to cart</a>
+        </td>
+      </tr>
+    </table>
+
+    <table class="product">
+      <tr>
+        <td><img src="images/img4.jpg" class="plantimg" /></td>
+        <td>Product ID:8</td>
+        <td>Product name:white rose</td>
+        <td>Price:90</td>
+        <td>Status:available</td>
+        <td>Category:roses</td>
+        <td>
+          <a href="mainController?action=addtocart&pid=8">Add to cart</a>
+        </td>
+      </tr>
+    </table>
+
+    <table class="product">
+      <tr>
+        <td><img src="images/img2.jpg" class="plantimg" /></td>
+        <td>Product ID:9</td>
+        <td>Product name:lan ho diep</td>
+        <td>Price:70</td>
+        <td>Status:available</td>
+        <td>Category:orchid</td>
+        <td>
+          <a href="mainController?action=addtocart&pid=9">Add to cart</a>
+        </td>
+      </tr>
+    </table>
+
+    <table class="product">
+      <tr>
+        <td><img src="images/img3.jpg" class="plantimg" /></td>
+        <td>Product ID:10</td>
+        <td>Product name:lan hai</td>
+        <td>Price:140</td>
+        <td>Status:available</td>
+        <td>Category:orchid</td>
+        <td>
+          <a href="mainController?action=addtocart&pid=10">Add to cart</a>
+        </td>
+      </tr>
+    </table>
+
+    <table class="product">
+      <tr>
+        <td><img src="images/img5.jpg" class="plantimg" /></td>
+        <td>Product ID:11</td>
+        <td>Product name:cay hoa hong cam</td>
+        <td>Price:200</td>
+        <td>Status:available</td>
+        <td>Category:roses</td>
+        <td>
+          <a href="mainController?action=addtocart&pid=11">Add to cart</a>
+        </td>
+      </tr>
+    </table>
+
+    <table class="product">
+      <tr>
+        <td><img src="images/img6.jpg" class="plantimg" /></td>
+        <td>Product ID:12</td>
+        <td>Product name:monstera</td>
+        <td>Price:80</td>
+        <td>Status:available</td>
+        <td>Category:others</td>
+        <td>
+          <a href="mainController?action=addtocart&pid=12">Add to cart</a>
+        </td>
+      </tr>
+    </table>
+
+    <table class="product">
+      <tr>
+        <td><img src="images/img7.jpg" class="plantimg" /></td>
+        <td>Product ID:13</td>
+        <td>Product name:var monstera</td>
+        <td>Price:400</td>
+        <td>Status:available</td>
+        <td>Category:others</td>
+        <td>
+          <a href="mainController?action=addtocart&pid=13">Add to cart</a>
+        </td>
+      </tr>
+    </table>
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">
+          Copyright &copy; Plant shop 2022
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
